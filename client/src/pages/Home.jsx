@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, ListGroup, Row, Col, Image } from "react-bootstrap";
+import { Container, Card, ListGroup, Row, Col, Image  } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ListOfEmployee from "../components/ListOfEmployee";
 
@@ -21,7 +21,7 @@ const Home = ({ isAuthenticated }) => {
               <Row className="mt-3">
                 <Col md={6}>
                   <ListGroup>
-                    <ListGroup.Item>                      
+                    <ListGroup.Item>
                       <ListOfEmployee />
                     </ListGroup.Item>
                   </ListGroup>
@@ -45,8 +45,17 @@ const Home = ({ isAuthenticated }) => {
                 to manage your employees.
               </Card.Text>
               <Card.Text>
-                don't have an account? <Link to="/signup">register</Link> now
-              </Card.Text>
+                don't have an account? <Link to="/signup">register</Link> now               
+              </Card.Text>             
+              <Row className="text-center">
+                <Col md={10}>
+                  <Image
+                    src="https://static.startuptalky.com/2022/02/employee-retention.jpg"
+                    alt="employees"
+                    className="img-fluid"
+                  />
+                </Col>
+              </Row>
             </>
           )}
         </Card.Body>
